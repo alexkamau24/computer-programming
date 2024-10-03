@@ -20,7 +20,7 @@ int main() {
       daysOverdue = returnDate - dueDate;
 
 // fine rate
-    if (daysOverdue <= 7){                                                                                                                                                   
+    if (daysOverdue <= 7){                                                            
     fineRate = 20;}
      else if (daysOverdue <= 14){
      fineRate = 50;}
@@ -29,6 +29,11 @@ int main() {
      
  //fine amount
     fineAmount = daysOverdue * fineRate;
+    if(daysOverdue>7&&daysOverdue<=14){
+    fineAmount=(7*20)+((daysOverdue-7)*50);}
+    else(daysOverdue>=15);{
+    fineAmount=(7*20)+(7*50)+((daysOverdue-14)*100);}
+    
 
 //results
      printf("Book ID: %d\n", bookID);
