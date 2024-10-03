@@ -4,9 +4,9 @@
 int main() {
     int age;
     int income;
-    printf("please dial in your age:");
+    printf("PLEASE DIAL IN YOUR AGE:");
     scanf("%d",&age);
-    printf("pleae dial in your income:");
+    printf("PLEASE DIAL IN INCOME:");
     scanf("%d",&income);
     if (age>=21&&income>=21000){
     printf("conglatulations you qualify for a loan.\n");
