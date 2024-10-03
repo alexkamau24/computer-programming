@@ -7,6 +7,7 @@ int main() {
     float time;
     float rate;
     float compound_interest;
+    int n;
     
     printf("ENTER THE PRINCIPLE AMOUNT:");
     scanf("%f",&principle_amount);
@@ -14,8 +15,10 @@ int main() {
     scanf("%f",&time);
     printf("ENTER RATE IN PERCENTAGE:");
     scanf("%f",&rate);
+    printf("ENTER THE NUMBER OF TIMES COMPOUNDED IN A YEAR:");
+    scanf("%d",&n);
     
-    compound_interest=principle_amount*pow((1+rate/100),time)-principle_amount;
+    compound_interest=principle_amount*pow((1+(rate/(100*n))),n*time)-principle_amount;
     
     printf("\nCOMPOUND INTEREST:%.2f",compound_interest);
 
