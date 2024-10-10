@@ -1,0 +1,45 @@
+// ELECTRICITY BILL CALCULATOR
+#include <stdio.h>
+
+int main() {
+    int customerId;
+    char customerName[3];
+    int unitsConsumed;
+    float surcharge;
+    float normalCharge;
+    float chargesPerUnit;
+    float totalBill;
+    
+    // customer input
+    printf("ENTER ID:");
+    scanf("%d",&customerId);
+    printf("ENTER NAME:");
+    scanf("%s",customerName);
+    printf("ENTER UNITS CONSUMED:");
+    scanf("%d",&unitsConsumed);
+    
+    //charging conditions
+    if(unitsConsumed<=199){
+        normalCharge=unitsConsumed*1.99;}
+     else if(unitsConsumed>=200 && unitsConsumed<400){
+        normalCharge = unitsConsumed*1.50;}
+     else if(unitsConsumed>=400 && unitsConsumed<=600){
+        normalCharge=unitsConsumed*1.80;}
+     else{
+        normalCharge=unitsConsumed*2.00;}
+    
+    surcharge=0;
+    if(normalCharge>400){
+    surcharge=normalCharge*0.15;}
+
+     totalBill=normalCharge+surcharge;
+     
+     printf("\nCustomer Id:%d\n",customerId);
+     printf("Customer Name:%s\n",customerName);
+     printf("Units Consumed:%d\n",unitsConsumed);
+     printf("Normal charge:Ksh.%.2f\n",normalCharge);
+     printf("Surcharge:Ksh.%.2f\n",surcharge);
+     printf("Total Amount to Pay:Ksh.%.3f\n",totalBill);
+      
+    return 0;
+}
