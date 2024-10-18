@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main(){
+    int i,k;
+    int marks[2][3]={{23,45,94},{67,34,98}};
+    for(i=0;i<2;i++)
+    for(k<0;k<3;k++){
+    printf("marks[%d][%d]=%d\n",i,k,marks[i][k]);
+    }
+    return 0;
+}
