@@ -1,0 +1,28 @@
+//C PROGRAM FOR STRUCTURE
+#include <stdio.h>
+#include <string.h>
+
+struct book {
+    char title[30];//STRING 30 CHARACTERS
+    char author[30];//STRING 30 CHARACTERS
+    int publication_year;//INTEGER
+    char ISBN[13];//STRING 13 CHARACTERS
+    float price;//FLOAT
+};
+int main() {
+    struct book myBook;//DECLARATION OF STRUCTURE
+    strcpy(myBook.title, "Introduction to C Programming");
+    strcpy(myBook.author, "John Smith");
+    myBook.publication_year = 2022;
+    strcpy(myBook.ISBN, "9780131103627");
+    myBook.price = 49.99;
+
+    // PRINTING THE RESULT 
+    printf("Title: %s\n", myBook.title);
+    printf("Author: %s\n", myBook.author);
+    printf("Publication Year: %d\n", myBook.publication_year);
+    printf("ISBN: %s\n", myBook.ISBN);
+    printf("Price: %.2f\n", myBook.price);
+
+    return 0;
+}
